@@ -22,14 +22,26 @@
 OpenClaw-Skill/
 ├── SKILL.md                     # 主入口（核心工作流、命令速查、故障签名表）
 └── references/
+    ├── architecture.md          # Gateway 架构、WebSocket 协议、配对、不变量
+    ├── agent_runtime.md         # Agent 运行时、引导文件、Agent Loop、Hooks、超时
     ├── channels.md              # 20+ 频道配置指南（WhatsApp、Telegram、Discord 等）
-    ├── gateway_ops.md           # Gateway 架构、服务管理、远程访问
+    ├── clawhub.md               # ClawHub 公共 Skill 注册中心、CLI 命令
+    ├── gateway_ops.md           # Gateway 运维、服务管理
+    ├── memory.md                # 记忆系统、向量搜索、混合 BM25、QMD 后端
+    ├── model_failover.md        # 模型故障转移、OAuth、认证配置、冷却策略
     ├── multi_agent.md           # 多 Agent 路由、Bindings、Agent 配置
+    ├── polls.md                 # 投票功能（Telegram、WhatsApp、Discord、MS Teams）
+    ├── presence_discovery.md    # Presence 系统、发现机制（Bonjour/Tailscale）
     ├── providers.md             # 20+ 模型提供商（Anthropic、OpenAI、Ollama 等）
-    └── security.md              # 认证、访问控制、加固基线、事件响应
+    ├── queue.md                 # 命令队列：steer/followup/collect 模式
+    ├── security.md              # 认证、访问控制、加固基线
+    ├── streaming.md             # 块流式传输、分块、合并、预览模式
+    ├── thinking.md              # 思考级别、详细模式指令、推理可见性
+    ├── voice.md                 # Talk Mode（语音交互）+ Voice Wake（唤醒词）
+    └── ... (共 44 个参考文件)
 ```
 
-**共计约 1,400 行**结构化参考文档，覆盖 OpenClaw 所有核心功能。
+**共计约 4,000+ 行**结构化参考文档，覆盖 OpenClaw 所有核心功能。
 
 ## 安装方法
 
@@ -103,11 +115,23 @@ openclaw models status --probe     # 检查认证状态
 
 - [安装](https://docs.openclaw.ai/install)
 - [Gateway 架构](https://docs.openclaw.ai/concepts/architecture)
+- [Agent 运行时](https://docs.openclaw.ai/concepts/agent)
+- [Agent Loop](https://docs.openclaw.ai/concepts/agent-loop)
 - [配置](https://docs.openclaw.ai/gateway/configuration)
 - [频道](https://docs.openclaw.ai/channels)
 - [模型提供商](https://docs.openclaw.ai/providers)
+- [模型故障转移与 OAuth](https://docs.openclaw.ai/concepts/model-failover)
 - [工具](https://docs.openclaw.ai/tools)
+- [思考级别](https://docs.openclaw.ai/tools/thinking)
+- [命令队列](https://docs.openclaw.ai/concepts/queue)
+- [流式传输与分块](https://docs.openclaw.ai/concepts/streaming)
+- [记忆与向量搜索](https://docs.openclaw.ai/concepts/memory)
+- [ClawHub 注册中心](https://docs.openclaw.ai/tools/clawhub)
 - [多 Agent 路由](https://docs.openclaw.ai/concepts/multi-agent)
+- [Talk Mode 与 Voice Wake](https://docs.openclaw.ai/nodes/talk)
+- [投票功能](https://docs.openclaw.ai/automation/poll)
+- [Presence 与发现机制](https://docs.openclaw.ai/concepts/presence)
+- [ACP Agents](https://docs.openclaw.ai/pi)
 - [安全](https://docs.openclaw.ai/gateway/security)
 - [故障排查](https://docs.openclaw.ai/gateway/troubleshooting)
 - [CLI 参考](https://docs.openclaw.ai/cli)

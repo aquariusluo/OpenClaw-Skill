@@ -21,15 +21,27 @@ This is an Agent Skill designed for AI coding assistants (like Claude with Antig
 ```
 OpenClaw-Skill/
 ├── SKILL.md                     # Main entry (core workflows, commands, troubleshooting)
-└── references/
+└── references/              
+    ├── architecture.md          # Gateway architecture, wire protocol, pairing, invariants
+    ├── agent_runtime.md         # Agent runtime, bootstrap, agent loop, hooks, timeouts
     ├── channels.md              # 20+ channel setup guides (WhatsApp, Telegram, Discord, etc.)
-    ├── gateway_ops.md           # Gateway architecture, service management, remote access
+    ├── clawhub.md               # ClawHub public skill registry, CLI commands
+    ├── gateway_ops.md           # Gateway operations, service management
+    ├── memory.md                # Memory system, vector search, hybrid BM25, QMD backend
+    ├── model_failover.md        # Model failover, OAuth, auth profiles, cooldowns
     ├── multi_agent.md           # Multi-agent routing, bindings, per-agent config
+    ├── polls.md                 # Polls (Telegram, WhatsApp, Discord, MS Teams)
+    ├── presence_discovery.md    # Presence system, discovery (Bonjour/Tailscale)
     ├── providers.md             # 20+ model providers (Anthropic, OpenAI, Ollama, etc.)
-    └── security.md              # Auth, access control, hardening baseline, incident response
+    ├── queue.md                 # Command queue: steer/followup/collect modes
+    ├── security.md              # Auth, access control, hardening baseline
+    ├── streaming.md             # Block streaming, chunking, coalescing, preview modes
+    ├── thinking.md              # Thinking levels, verbose directives, reasoning visibility
+    ├── voice.md                 # Talk Mode (voice interaction) + Voice Wake (wake words)
+    └── ... (44 reference files total)
 ```
 
-**Total: ~1,400 lines** of structured reference covering all core OpenClaw functionality.
+**Total: ~4,000+ lines** of structured reference covering all core OpenClaw functionality.
 
 ## Installation
 
@@ -103,11 +115,23 @@ This skill is built from the official [OpenClaw Documentation](https://docs.open
 
 - [Install](https://docs.openclaw.ai/install)
 - [Gateway Architecture](https://docs.openclaw.ai/concepts/architecture)
+- [Agent Runtime](https://docs.openclaw.ai/concepts/agent)
+- [Agent Loop](https://docs.openclaw.ai/concepts/agent-loop)
 - [Configuration](https://docs.openclaw.ai/gateway/configuration)
 - [Channels](https://docs.openclaw.ai/channels)
 - [Model Providers](https://docs.openclaw.ai/providers)
+- [Model Failover & OAuth](https://docs.openclaw.ai/concepts/model-failover)
 - [Tools](https://docs.openclaw.ai/tools)
+- [Thinking Levels](https://docs.openclaw.ai/tools/thinking)
+- [Command Queue](https://docs.openclaw.ai/concepts/queue)
+- [Streaming & Chunking](https://docs.openclaw.ai/concepts/streaming)
+- [Memory & Vector Search](https://docs.openclaw.ai/concepts/memory)
+- [ClawHub Registry](https://docs.openclaw.ai/tools/clawhub)
 - [Multi-Agent Routing](https://docs.openclaw.ai/concepts/multi-agent)
+- [Talk Mode & Voice Wake](https://docs.openclaw.ai/nodes/talk)
+- [Polls](https://docs.openclaw.ai/automation/poll)
+- [Presence & Discovery](https://docs.openclaw.ai/concepts/presence)
+- [ACP Agents](https://docs.openclaw.ai/pi)
 - [Security](https://docs.openclaw.ai/gateway/security)
 - [Troubleshooting](https://docs.openclaw.ai/gateway/troubleshooting)
 - [CLI Reference](https://docs.openclaw.ai/cli)
